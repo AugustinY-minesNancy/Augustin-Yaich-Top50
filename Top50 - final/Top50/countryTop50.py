@@ -23,7 +23,7 @@ names = ['country','sng_id','count']
 
 def loadlisten(day):
     path=Path.cwd().parent/'gaussLogs'
-    file='gausslisten-%d.log' % day
+    file='listen-%d.log' % day   #Change day by date to use listen-YYYYMMDD.log files in normal mode
     filename=path/file
     df = pd.read_csv(filename, sep="|",names=column,dtype={"sng_id ": "int32" , "coutry": "category"}) #read the logs of the day
     df = df[['country','sng_id']]
