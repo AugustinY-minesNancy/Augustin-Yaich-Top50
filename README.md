@@ -39,6 +39,8 @@ Choose test = False
 Chose the first day the program is executed
 Run the program one time a day and it will automatically detect since when it started to count.
 After 7 days it will print the top50 per country in a text file.
+In this mode it is possible to use log files with the format : listen-YYYYMMDD.log
+To do so you have to change 'day' by 'date' in the loadlisten() function.
 ```
 
 Mode simulation
