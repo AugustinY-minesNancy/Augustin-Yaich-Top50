@@ -14,7 +14,7 @@ for k in range(len(pycountry.countries)):
     ISO.append(list(pycountry.countries)[k].alpha_2)
 
 for day in range(7):
-    filename = "gausslisten-%d.log" % day
+    filename = "listen-%d.log" % day
     fichier = open(filename, "w")
     
     
