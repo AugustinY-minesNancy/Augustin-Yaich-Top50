@@ -33,6 +33,10 @@ And put it in the "logs" directory.
 
  ## Mode selection 
  
+ Open 
+ ```
+countryTop50
+```
 Mode normal
 ```
 Choose test = False
