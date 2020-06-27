@@ -23,7 +23,7 @@ names = ['country','sng_id','count']
 
 def loadlisten(day):
     path=Path.cwd().parent/'Logs'
-    file='listen-%d.log' % day
+    file='listen-%d.log' % day  #change here
     filename=path/file
     df = pd.read_csv(filename, sep="|",names=column,dtype={"sng_id ": "int32" , "coutry": "category"}) #read the logs of the day
     df = df[['country','sng_id']]
@@ -149,7 +149,7 @@ def main(day):
             
             
 def simulation():
-    for day in range(6,7):
+    for day in range(7):
         print("Begining of day",day)
         Start_time = time.time()
         if day == 0:
