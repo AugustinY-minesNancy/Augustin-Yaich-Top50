@@ -37,7 +37,7 @@ And put it in the "logs" directory.
  ```
 countryTop50
 ```
-Mode normal
+Normal mode
 ```
 Choose test = False
 Chose the first day the program is executed
@@ -47,7 +47,7 @@ In this mode it is possible to use log files with the format : listen-YYYYMMDD.l
 To do so you have to change 'day' by 'date' in the loadlisten() function.
 ```
 
-Mode simulation
+Simulation mode
 ```
 Choose test = True
 It will run every 7 days at one time. 
