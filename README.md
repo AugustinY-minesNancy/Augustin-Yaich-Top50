@@ -18,7 +18,7 @@ pycountry 19.8.18
 
 ## Installation
 
-Download the folder : "Top50 - final"
+Download the folder : "Top50_final_bis"
 
 ## Generate some datas (30M per file)
 
@@ -27,8 +27,8 @@ Execute
 Data_generator
 ```
 Or use other datas with the format : listen-day.log   
-with day which reprensent a number between 0 and 6.
-And put it in the "gausslogs" directory.
+with day which reprensents a number between 0 and 6.
+And put it in the "logs" directory.
 
 
  ## Mode selection 
@@ -54,10 +54,10 @@ Before to rerun, delete the folder 'Count_per_country' and the Top50 file which 
 ## Explanation
 
 Everyday the algorithm count the number of stream for each music per country and add it to the count of the previous days.
-It creates a file per country so he can reuse the counts he calculated he next day.
+It creates a file per country so he can reuse the counts he calculated the next day.
 
-## Performance
-Execution time : 30s per day
-RAM needed : less than 1Go
+## Performance for my laptop
+Execution time : 5min per day
+RAM needed : about 1Go
 
 
