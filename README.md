@@ -39,17 +39,17 @@ countryTop50
 ```
 Normal mode
 ```
-Choose test = False
+Choose : test = False (line 207)
 Chose the first day the program is executed
 Run the program one time a day and it will automatically detect since when it started to count.
 After 7 days it will print the top50 per country in a text file.
 In this mode it is possible to use log files with the format : listen-YYYYMMDD.log
-To do so you have to change 'day' by 'date' in the loadlisten() function.
+To do so you have to change 'day' by 'date' in the loadlisten() function (line 26).
 ```
 
 Simulation mode
 ```
-Choose test = True
+Choose : test = True (line 207)
 It will run every 7 days at one time. 
 Before to rerun, delete the folder 'Count_per_country' and the Top50 file which have been created.
 ```
