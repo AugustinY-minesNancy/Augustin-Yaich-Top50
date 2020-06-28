@@ -1,5 +1,5 @@
 
-### DEEZER_TOP50
+# DEEZER_TOP50
 
 ## Technical Prerequisite
 
@@ -28,31 +28,43 @@ Data_generator
 ```
 Or use other datas with the format : listen-day.log   
 with day which reprensents a number between 0 and 6.
-And put it in the "logs" directory.
+And put them in the "logs" directory.
+
+You can also use log files with the format : listen-YYYYMMDD.log
+To do so you have to change **day** by **date** in the loadlisten() function (line 26).
 
 
- ## Mode selection 
- 
+ ## Create a Top50 per country
  Open 
  ```
 countryTop50
 ```
-Normal mode
+
+Select the first of the 7 days which will be taken in account for the top50 :
+Change **starting_day** (line 212)
+
+
+### Mode selection
+
+Normal mode : choose **test = False** (line 207)
 ```
-Choose : test = False (line 207)
-Chose the first day the program is executed
-Run the program one time a day and it will automatically detect since when it started to count.
+Run the algorithm one time a day and it will automatically detect since when it started to count.
 After 7 days it will print the top50 per country in a text file.
-In this mode it is possible to use log files with the format : listen-YYYYMMDD.log
-To do so you have to change 'day' by 'date' in the loadlisten() function (line 26).
 ```
 
-Simulation mode
+Simulation mode : choose **test = True** (line 207)
 ```
-Choose : test = True (line 207)
-It will run every 7 days at one time. 
-Before to rerun, delete the folder 'Count_per_country' and the Top50 file which have been created.
+It will run every 7 days at one time and it will print the top50 per country in a text file.
 ```
+
+### Run the algorithm
+Execute
+```
+countryTop50
+```
+
+### Results
+The top50 per country is printed in a text file in the same directory.
 
 
 ## Explanation
@@ -60,7 +72,7 @@ Before to rerun, delete the folder 'Count_per_country' and the Top50 file which 
 Everyday the algorithm count the number of stream for each music per country and add it to the count of the previous days.
 It creates a file per country so he can reuse the counts he calculated the next day.
 
-## Performance for my laptop
+## Performance with my laptop
 Execution time : 5min per day
 RAM needed : about 1Go
 
