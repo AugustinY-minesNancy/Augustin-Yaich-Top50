@@ -26,7 +26,7 @@ Execute
 ```
 Data_generator
 ```
-Or use other datas with the format : **listen-day.log**    *day* is reprensented by a number between 0 and 6.
+Or use other datas with the format : **listen-day.log**    (*day* represents a number between 0 and 6).
 And put them in the "logs" directory.
 
 You can also use log files with the format : **listen-YYYYMMDD.log**
