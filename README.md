@@ -31,7 +31,7 @@ with day which reprensents a number between 0 and 6.
 And put them in the "logs" directory.
 
 You can also use log files with the format : listen-YYYYMMDD.log
-To do so you have to change *day* by *date* in the loadlisten() function (line 26).
+To do so you have to change **day** by **date** in the loadlisten() function (line 26).
 
 
  ## Create a Top50 per country
