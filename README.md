@@ -73,6 +73,6 @@ It creates a file per country so he can reuse the counts he calculated the next 
 
 ## Performance with my laptop
 Execution time : 5min per day
-RAM needed : about 1Go
+RAM needed : Between 1Go and 2Go
 
 
