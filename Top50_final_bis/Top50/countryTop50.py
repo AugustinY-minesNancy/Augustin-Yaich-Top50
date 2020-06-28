@@ -4,7 +4,7 @@ Created on Mon Jun 15 17:25:55 2020
 
 @author: augus
 """
-
+#Import libraries
 import datetime
 import pandas as pd
 from pandas import Series, DataFrame
@@ -13,6 +13,7 @@ import pycountry
 import time
 from pathlib import Path
 
+#Create a list wich contains every country's ISO
 ISO = []
 for k in range(len(pycountry.countries)):
     ISO.append(list(pycountry.countries)[k].alpha_2)
@@ -21,6 +22,7 @@ for k in range(len(pycountry.countries)):
 column = ['sng_id','user_id','country']
 names = ['country','sng_id','count']
 
+#Load and clean a day logs 
 def loadlisten(day):
     path=Path.cwd().parent/'Logs'
     file='listen-%d.log' % day #change here
@@ -215,8 +217,6 @@ if __name__ == '__main__':
     test = True  #change
     
     path = Path.cwd()
-    
-    
     starting_day = 20200627  #choose the first day the algorithm is run with the format YYYYMMDD
     date = time.strftime('%Y%m%d') 
     day = int(date) - starting_day  
