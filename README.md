@@ -47,7 +47,7 @@ Change *starting_day* (line 220)
 
 **Normal mode** : choose *test = False* (line 215)
 ```
-Run the algorithm one time a day and it will automatically detect since when it started to count.
+Run the algorithm one time a day and it will automatically detect since when it has started to count.
 After 7 days it will print the top50 per country in a text file.
 ```
 
