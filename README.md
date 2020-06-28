@@ -31,7 +31,7 @@ with day which reprensents a number between 0 and 6.
 And put them in the "logs" directory.
 
 You can also use log files with the format : listen-YYYYMMDD.log
-To do so you have to change **day** by **date** in the loadlisten() function (line 26).
+To do so you have to change *day* by *date* in the loadlisten() function (line 26).
 
 
  ## Create a Top50 per country
@@ -41,18 +41,18 @@ countryTop50
 ```
 
 Select the first of the 7 days which will be taken in account for the top50 :
-Change **starting_day** (line 212)
+Change *starting_day* (line 212)
 
 
 ### Mode selection
 
-Normal mode : choose **test = False** (line 207)
+**Normal mode** : choose *test = False* (line 207)
 ```
 Run the algorithm one time a day and it will automatically detect since when it started to count.
 After 7 days it will print the top50 per country in a text file.
 ```
 
-Simulation mode : choose **test = True** (line 207)
+**Simulation mode** : choose *test = True* (line 207)
 ```
 It will run every 7 days at one time and it will print the top50 per country in a text file.
 ```
