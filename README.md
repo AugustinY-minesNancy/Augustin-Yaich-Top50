@@ -30,7 +30,7 @@ Or use other datas with the format : **listen-day.log**    (*day* represents a n
 And put them in the "logs" directory.
 
 You can also use log files with the format : **listen-YYYYMMDD.log**
-To do so you have to change **day** by **date** in the loadlisten() function (line 26).
+To do so you have to change **day** by **date** in the loadlisten() function (line 28).
 
 
  ## Create a Top50 per country
@@ -45,13 +45,13 @@ Change *starting_day* (line 220)
 
 ### Mode selection
 
-**Normal mode** : choose *test = False* (line 215)
+**Normal mode** : choose *test = False* (line 217)
 ```
 Run the algorithm one time a day and it will automatically detect since when it has started to count.
 After 7 days it will print the top50 per country in a text file.
 ```
 
-**Simulation mode** : choose *test = True* (line 215)
+**Simulation mode** : choose *test = True* (line 217)
 ```
 It will run every 7 days at one time and it will print the top50 per country in a text file.
 ```
