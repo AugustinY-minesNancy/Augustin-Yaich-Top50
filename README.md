@@ -40,18 +40,18 @@ countryTop50
 ```
 
 Select the first of the 7 days which will be taken in account for the top50 :
-Change *starting_day* (line 212)
+Change *starting_day* (line 220)
 
 
 ### Mode selection
 
-**Normal mode** : choose *test = False* (line 207)
+**Normal mode** : choose *test = False* (line 215)
 ```
 Run the algorithm one time a day and it will automatically detect since when it started to count.
 After 7 days it will print the top50 per country in a text file.
 ```
 
-**Simulation mode** : choose *test = True* (line 207)
+**Simulation mode** : choose *test = True* (line 215)
 ```
 It will run every 7 days at one time and it will print the top50 per country in a text file.
 ```
