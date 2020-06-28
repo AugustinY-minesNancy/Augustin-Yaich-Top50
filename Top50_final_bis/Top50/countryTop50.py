@@ -23,11 +23,19 @@ names = ['country','sng_id','count']
 
 def loadlisten(day):
     path=Path.cwd().parent/'Logs'
-    file='listen-%d.log' % day  #change here
+    file='listen-%d.log' % day #change here
     filename=path/file
-    df = pd.read_csv(filename, sep="|",names=column,dtype={"sng_id ": "int32" , "coutry": "category"}) #read the logs of the day
-    df = df[['country','sng_id']]
-    df = df.dropna()
+    df_chunk = pd.read_csv(filename,sep="|",names=column,dtype={"sng_id ": "int32" , "coutry": "category"}, chunksize=1000000)
+    
+    chunk_list = []  # append each chunk df here 
+    # Each chunk is in df format
+    for chunk in df_chunk:
+        chunk = chunk[['country','sng_id']]
+        chunk = chunk.dropna()
+        chunk_list.append(chunk)
+        
+    # concat the list into dataframe 
+    df = pd.concat(chunk_list)
     return df
 
 #Count the number of streams of each music per country
@@ -209,7 +217,7 @@ if __name__ == '__main__':
     path = Path.cwd()
     
     
-    starting_day = 20200619  #change the first day the palgorithm is run with the format YYYYMMDD
+    starting_day = 20200627  #choose the first day the algorithm is run with the format YYYYMMDD
     date = time.strftime('%Y%m%d') 
     day = int(date) - starting_day  
     directory_name = 'Count_per_country' +str(starting_day) #directory where the counts for every country is saved
