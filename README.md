@@ -26,11 +26,8 @@ Execute
 ```
 Data_generator
 ```
-Or use other datas with the format : **listen-day.log**    (*day* represents a number between 0 and 6).
+Or use other datas with the format : **listen-day.log**    (*day* represents a date with the format YYYYMMDD).
 And put them in the "logs" directory.
-
-You can also use log files with the format : **listen-YYYYMMDD.log**
-To do so you have to change **day** by **date** in the loadlisten() function (line 28).
 
 
  ## Create a Top50 per country
@@ -40,24 +37,24 @@ countryTop50
 ```
 
 Select the first of the 7 days which will be taken in account for the top50 :
-Change *starting_day* (line 220)
+Change **starting_day** (line 201)
 
 
 ### Mode selection
 
-**Normal mode** : choose *test = False* (line 217)
+**Normal mode** : choose *test = False* (line 199)
 ```
 Run the algorithm one time a day and it will automatically detect since when it has started to count.
 After 7 days it will print the top50 per country in a text file.
 ```
 
-**Simulation mode** : choose *test = True* (line 217)
+**Simulation mode** : choose *test = True* (line 199)
 ```
 It will run every 7 days at one time and it will print the top50 per country in a text file.
 ```
 
 ### Run the algorithm
-Execute
+Execute with python
 ```
 countryTop50
 ```
@@ -72,8 +69,8 @@ Everyday the algorithm count the number of stream for each music per country and
 It creates a file per country so he can reuse the counts he calculated the next day.
 
 ## Performance with my laptop
-Execution time : 5min per day
+Execution time : Between 4 and 5min per day
 
-RAM needed : Between 1Go and 2Go
+RAM needed : Less than 1 Go 
 
 
