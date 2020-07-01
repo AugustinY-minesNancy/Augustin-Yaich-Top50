@@ -18,7 +18,7 @@ pycountry 19.8.18
 
 ## Installation
 
-Download the folder : "Top50_final_bis"
+Download the folder : "Top50_RealFinalVersion"
 
 ## Generate some datas (30M per file)
 
